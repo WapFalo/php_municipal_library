@@ -41,4 +41,4 @@ Deuxième difficulté: Je n'arrive pas à accéder à la page edit pour user, ce
 
 À résoudre plus tard pour le moment.
 
-Troisième difficulté: Le remplacement des pages d'erreur ne se fait pas.
+Troisième difficulté: Le remplacement des pages d'erreur ne se fait pas. (-> peut-être car Symfony affiche ses propres pages d'erreur en mode dev, à voir passer en mode prod).
