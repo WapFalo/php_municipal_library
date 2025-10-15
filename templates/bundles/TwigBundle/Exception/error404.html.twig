@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page non trouvée - Erreur 404{% endblock %}
+
+{% block body %}
+    <div style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        text-align: center;
+        color: #333;
+    ">
+        <h1 style="font-size: 5rem; font-weight: 700; color: #e53e3e;">404</h1>
+        <h2 style="margin-top: 1rem; font-size: 1.5rem;">Oups… la page que vous cherchez n’existe pas !</h2>
+        <p style="margin: 1rem 0; color: #666;">
+            Il se peut que la page ait été déplacée, supprimée ou que l’URL soit incorrecte.
+        </p>
+
+        <a href="{{ path('app_home') }}" 
+           style="
+               display: inline-block;
+               margin-top: 1.5rem;
+               background-color: #3182ce;
+               color: white;
+               padding: 0.75rem 1.5rem;
+               border-radius: 8px;
+               text-decoration: none;
+               transition: background-color 0.3s ease;
+           "
+           onmouseover="this.style.backgroundColor='#2b6cb0'"
+           onmouseout="this.style.backgroundColor='#3182ce'">
+            ⬅ Retour à l’accueil
+        </a>
+
+        <div style="margin-top: 2rem; font-size: 0.9rem; color: #999;">
+            Erreur 404 - {{ app.request.uri }}
+        </div>
+    </div>
+{% endblock %}
